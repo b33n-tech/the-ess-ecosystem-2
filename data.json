@@ -1,0 +1,129 @@
+{
+  "sources": [
+    {
+      "id": "bpifrance",
+      "name": "Bpifrance",
+      "desc": "Financement et accompagnement de l’innovation, de la croissance et de l’internationalisation des entreprises.",
+      "url": "https://www.bpifrance.fr/",
+      "tags": ["innovation", "entrepreneuriat", "PME"],
+      "calls": [
+        {
+          "id": "bpi-innovation-2025",
+          "title": "Appel à projets – Innovation sociale 2025",
+          "deadline": "2025-12-15",
+          "url": "https://www.bpifrance.fr/innovation-sociale",
+          "tags": ["innovation", "social", "startup"],
+          "note": "Soutien financier pour les entreprises innovantes à impact social. Subvention jusqu’à 80k€."
+        },
+        {
+          "id": "bpi-ecotransition",
+          "title": "Concours Éco-Transition 2025",
+          "deadline": "2025-11-30",
+          "url": "https://www.bpifrance.fr/eco-transition",
+          "tags": ["écologie", "transition", "industrie"],
+          "note": "Aide aux projets de décarbonation et d’économie circulaire. Jury en mars 2026."
+        }
+      ]
+    },
+    {
+      "id": "fondation-engie",
+      "name": "Fondation ENGIE",
+      "desc": "Soutien aux projets culturels et solidaires favorisant l’accès à l’énergie et à l’inclusion.",
+      "url": "https://fondation-engie.com/",
+      "tags": ["culture", "inclusion", "énergie"],
+      "calls": [
+        {
+          "id": "engie-culture-jeunesse",
+          "title": "Appel à projets – Culture et Jeunesse 2025",
+          "deadline": "2025-09-30",
+          "url": "https://fondation-engie.com/appel-culture-jeunesse",
+          "tags": ["culture", "jeunesse", "inclusion"],
+          "note": "Soutien aux associations œuvrant pour l’accès à la culture des jeunes publics."
+        },
+        {
+          "id": "engie-solidarite",
+          "title": "Programme Solidarité & Énergie",
+          "deadline": "2026-01-31",
+          "url": "https://fondation-engie.com/solidarite-energie",
+          "tags": ["solidarité", "énergie", "écologie"],
+          "note": "Financement de projets d’accès durable à l’énergie pour les populations vulnérables."
+        }
+      ]
+    },
+    {
+      "id": "caisse-des-depots",
+      "name": "Caisse des Dépôts et Consignations",
+      "desc": "Acteur public investissant dans les territoires, l’économie sociale et la transition écologique.",
+      "url": "https://www.caissedesdepots.fr/",
+      "tags": ["ESS", "territoires", "écologie"],
+      "calls": [
+        {
+          "id": "cdc-ess-territoires",
+          "title": "Appel à projets – ESS & Territoires",
+          "deadline": "2025-12-10",
+          "url": "https://www.caissedesdepots.fr/ess-territoires",
+          "tags": ["ESS", "territoires", "emploi"],
+          "note": "Appel à projets pour soutenir des structures de l’économie sociale et solidaire locales."
+        },
+        {
+          "id": "cdc-habitat-durable",
+          "title": "Programme Habitat Durable 2025",
+          "deadline": "2026-03-01",
+          "url": "https://www.caissedesdepots.fr/habitat-durable",
+          "tags": ["logement", "écologie", "transition"],
+          "note": "Soutien aux projets d’habitat à faible impact carbone."
+        }
+      ]
+    },
+    {
+      "id": "ademe",
+      "name": "ADEME",
+      "desc": "Agence de la transition écologique – soutient la recherche, l’innovation et les projets durables.",
+      "url": "https://www.ademe.fr/",
+      "tags": ["écologie", "innovation", "transition"],
+      "calls": [
+        {
+          "id": "ademe-recherche-verte",
+          "title": "Appel à projets – Recherche & Innovation verte 2025",
+          "deadline": "2025-11-20",
+          "url": "https://www.ademe.fr/recherche-verte",
+          "tags": ["écologie", "innovation"],
+          "note": "Projets de R&D sur les technologies vertes et la sobriété énergétique."
+        },
+        {
+          "id": "ademe-mobilite",
+          "title": "Appel à projets Mobilité Durable 2025",
+          "deadline": "2026-02-15",
+          "url": "https://www.ademe.fr/mobilite-durable",
+          "tags": ["mobilité", "énergie", "transition"],
+          "note": "Soutien aux projets de mobilité bas carbone dans les territoires ruraux."
+        }
+      ]
+    },
+    {
+      "id": "region-idf",
+      "name": "Région Île-de-France",
+      "desc": "La région soutient les initiatives locales dans la culture, la formation et la transition écologique.",
+      "url": "https://www.iledefrance.fr/",
+      "tags": ["région", "culture", "éducation"],
+      "calls": [
+        {
+          "id": "idf-culture",
+          "title": "Aide régionale à la création culturelle",
+          "deadline": "2025-10-10",
+          "url": "https://www.iledefrance.fr/aide-creation-culturelle",
+          "tags": ["culture", "création"],
+          "note": "Subvention pour la création d’œuvres artistiques en Île-de-France."
+        },
+        {
+          "id": "idf-formations",
+          "title": "Appel à projets – Formation et insertion 2026",
+          "deadline": "2026-01-10",
+          "url": "https://www.iledefrance.fr/formation-insertion",
+          "tags": ["formation", "emploi", "éducation"],
+          "note": "Soutien aux dispositifs d’insertion professionnelle pour les jeunes et publics éloignés de l’emploi."
+        }
+      ]
+    }
+  ]
+}
