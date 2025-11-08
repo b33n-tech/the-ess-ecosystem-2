@@ -1,0 +1,29 @@
+async function loadJSON() {
+  const editor = document.getElementById("json-editor");
+  try {
+    const response = await fetch("data.json");
+    const json = await response.json();
+    editor.value = JSON.stringify(json, null, 2);
+  } catch (err) {
+    editor.value = "Erreur de chargement du JSON.";
+    console.error(err);
+  }
+}
+
+function downloadJSON() {
+  const editor = document.getElementById("json-editor");
+  try {
+    const blob = new Blob([editor.value], { type: "application/json" });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "data.json";
+    link.click();
+  } catch (err) {
+    alert("Erreur de téléchargement : " + err.message);
+  }
+}
+
+document.getElementById("save-btn").addEventListener("click", downloadJSON);
+document.getElementById("reload-btn").addEventListener("click", loadJSON);
+
+loadJSON();
