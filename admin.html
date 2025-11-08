@@ -1,28 +1,66 @@
+let data = { sources: [] };
+
+// Charge le JSON initial
 async function loadJSON() {
   const editor = document.getElementById("json-editor");
   try {
     const response = await fetch("data.json");
-    const json = await response.json();
-    editor.value = JSON.stringify(json, null, 2);
+    data = await response.json();
+    editor.value = JSON.stringify(data, null, 2);
   } catch (err) {
     editor.value = "Erreur de chargement du JSON.";
     console.error(err);
   }
 }
 
-function downloadJSON() {
-  const editor = document.getElementById("json-editor");
-  try {
-    const blob = new Blob([editor.value], { type: "application/json" });
-    const link = document.createElement("a");
-    link.href = URL.createObjectURL(blob);
-    link.download = "data.json";
-    link.click();
-  } catch (err) {
-    alert("Erreur de téléchargement : " + err.message);
+// Ajouter un nouvel appel via formulaire
+function addCall() {
+  const structureName = document.getElementById("structure").value.trim();
+  const title = document.getElementById("title").value.trim();
+  const deadline = document.getElementById("deadline").value;
+  const url = document.getElementById("url").value.trim();
+  const tags = document.getElementById("tags").value.split(",").map(t => t.trim()).filter(t => t);
+  const note = document.getElementById("note").value.trim();
+
+  if (!structureName || !title || !deadline || !url) {
+    alert("Remplis au moins : Structure, Titre, Date, URL");
+    return;
   }
+
+  // Cherche si la structure existe déjà
+  let source = data.sources.find(s => s.name === structureName);
+  if (!source) {
+    source = { name: structureName, desc: "", tags: [], calls: [] };
+    data.sources.push(source);
+  }
+
+  source.calls.push({
+    title, deadline, url, tags, note
+  });
+
+  // Met à jour l'éditeur
+  document.getElementById("json-editor").value = JSON.stringify(data, null, 2);
+
+  // Reset formulaire
+  document.getElementById("structure").value = "";
+  document.getElementById("title").value = "";
+  document.getElementById("deadline").value = "";
+  document.getElementById("url").value = "";
+  document.getElementById("tags").value = "";
+  document.getElementById("note").value = "";
 }
 
+// Téléchargement JSON
+function downloadJSON() {
+  const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+  const link = document.createElement("a");
+  link.href = URL.createObjectURL(blob);
+  link.download = "data.json";
+  link.click();
+}
+
+// Event listeners
+document.getElementById("add-btn").addEventListener("click", addCall);
 document.getElementById("save-btn").addEventListener("click", downloadJSON);
 document.getElementById("reload-btn").addEventListener("click", loadJSON);
 
